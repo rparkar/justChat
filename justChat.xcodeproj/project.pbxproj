@@ -13,9 +13,13 @@
 		6C971D5B20A7544A002B4972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C971D5920A7544A002B4972 /* Main.storyboard */; };
 		6C971D5D20A7544B002B4972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C971D5C20A7544B002B4972 /* Assets.xcassets */; };
 		6C971D6020A7544B002B4972 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C971D5E20A7544B002B4972 /* LaunchScreen.storyboard */; };
+		6C971D6D20A75968002B4972 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C971D6C20A75968002B4972 /* GoogleService-Info.plist */; };
+		D75871A7E7EFECF58CABBC9B /* Pods_justChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7F3283EA9451FC089B8139 /* Pods_justChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0178A262B9A4B3982D52D908 /* Pods-justChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-justChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-justChat/Pods-justChat.release.xcconfig"; sourceTree = "<group>"; };
+		43ED0C5C4C2E131C3011733B /* Pods-justChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-justChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-justChat/Pods-justChat.debug.xcconfig"; sourceTree = "<group>"; };
 		6C971D5020A7544A002B4972 /* justChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = justChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C971D5320A7544A002B4972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C971D5520A7544A002B4972 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		6C971D5C20A7544B002B4972 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C971D5F20A7544B002B4972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C971D6120A7544B002B4972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C971D6C20A75968002B4972 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9A7F3283EA9451FC089B8139 /* Pods_justChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_justChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75871A7E7EFECF58CABBC9B /* Pods_justChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AFAFAA6E02688921A9E28BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43ED0C5C4C2E131C3011733B /* Pods-justChat.debug.xcconfig */,
+				0178A262B9A4B3982D52D908 /* Pods-justChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6C971D4720A75449002B4972 = {
 			isa = PBXGroup;
 			children = (
 				6C971D5220A7544A002B4972 /* justChat */,
 				6C971D5120A7544A002B4972 /* Products */,
+				1AFAFAA6E02688921A9E28BF /* Pods */,
+				DDE1371156B0F88E0F95721B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +86,7 @@
 				6C971D5C20A7544B002B4972 /* Assets.xcassets */,
 				6C971D5E20A7544B002B4972 /* LaunchScreen.storyboard */,
 				6C971D6120A7544B002B4972 /* Info.plist */,
+				6C971D6C20A75968002B4972 /* GoogleService-Info.plist */,
 			);
 			path = justChat;
 			sourceTree = "<group>";
@@ -107,6 +126,14 @@
 			path = services;
 			sourceTree = "<group>";
 		};
+		DDE1371156B0F88E0F95721B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A7F3283EA9451FC089B8139 /* Pods_justChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,9 +141,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C971D6420A7544B002B4972 /* Build configuration list for PBXNativeTarget "justChat" */;
 			buildPhases = (
+				56DB63AAE3A21109C6CBFFC3 /* [CP] Check Pods Manifest.lock */,
 				6C971D4C20A7544A002B4972 /* Sources */,
 				6C971D4D20A7544A002B4972 /* Frameworks */,
 				6C971D4E20A7544A002B4972 /* Resources */,
+				82F404909C3B745782C81C08 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,12 +195,58 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C971D6020A7544B002B4972 /* LaunchScreen.storyboard in Resources */,
+				6C971D6D20A75968002B4972 /* GoogleService-Info.plist in Resources */,
 				6C971D5D20A7544B002B4972 /* Assets.xcassets in Resources */,
 				6C971D5B20A7544A002B4972 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56DB63AAE3A21109C6CBFFC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-justChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82F404909C3B745782C81C08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-justChat/Pods-justChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-justChat/Pods-justChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6C971D4C20A7544A002B4972 /* Sources */ = {
@@ -322,14 +397,12 @@
 		};
 		6C971D6520A7544B002B4972 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43ED0C5C4C2E131C3011733B /* Pods-justChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = justChat/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.parkar.justChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -339,14 +412,12 @@
 		};
 		6C971D6620A7544B002B4972 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0178A262B9A4B3982D52D908 /* Pods-justChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = justChat/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.parkar.justChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>619943718926-of9pn2hi0irm88d8p4gtjv2odk0econt.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.619943718926-of9pn2hi0irm88d8p4gtjv2odk0econt</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBm3JWgBPQrRuROhSMu0vv3-uR-S4RnxH8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>619943718926</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.parkar.justChat</string>
+	<key>PROJECT_ID</key>
+	<string>justchat-d0721</string>
+	<key>STORAGE_BUCKET</key>
+	<string>justchat-d0721.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:619943718926:ios:50f31f6e0e7a099e</string>
+	<key>DATABASE_URL</key>
+	<string>https://justchat-d0721.firebaseio.com</string>
+</dict>
+</plist>
