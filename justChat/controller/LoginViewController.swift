@@ -54,7 +54,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    
     @IBAction func closeButtonPressed(_ sender: Any) {
         
         dismiss(animated: true, completion: nil)
