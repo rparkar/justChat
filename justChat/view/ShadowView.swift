@@ -15,5 +15,5 @@ class ShadowView: UIView {
         self.layer.shadowRadius = 5
         self.layer.shadowOpacity = 0.75
         self.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-
+    }
 }
