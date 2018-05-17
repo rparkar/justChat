@@ -23,6 +23,11 @@ class PostViewController: UIViewController {
         textView.delegate = self
         sendButton.bindToKeyboard()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.emailLabel.text = Auth.auth().currentUser?.email
+    }
 
     @IBAction func sendButtonPressed(_ sender: Any) {
         
