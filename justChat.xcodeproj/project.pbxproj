@@ -14,6 +14,7 @@
 		6C1DAB4720ABF81800782522 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1DAB4620ABF81800782522 /* PostViewController.swift */; };
 		6C1DAB4920AD33EB00782522 /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1DAB4820AD33EB00782522 /* UIViewExtention.swift */; };
 		6C1DAB4B20AD3DA900782522 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1DAB4A20AD3DA900782522 /* FeedCell.swift */; };
+		6C1DAB4D20AD4B6500782522 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1DAB4C20AD4B6500782522 /* Message.swift */; };
 		6C971D5420A7544A002B4972 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C971D5320A7544A002B4972 /* AppDelegate.swift */; };
 		6C971D5B20A7544A002B4972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C971D5920A7544A002B4972 /* Main.storyboard */; };
 		6C971D5D20A7544B002B4972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C971D5C20A7544B002B4972 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		6C1DAB4620ABF81800782522 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		6C1DAB4820AD33EB00782522 /* UIViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
 		6C1DAB4A20AD3DA900782522 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		6C1DAB4C20AD4B6500782522 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		6C971D5020A7544A002B4972 /* justChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = justChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C971D5320A7544A002B4972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C971D5A20A7544A002B4972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		6C971D6920A754B2002B4972 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				6C1DAB4C20AD4B6500782522 /* Message.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				6C971D6F20A760D4002B4972 /* DataService.swift in Sources */,
 				6C1DAB4320ABCEA300782522 /* GroupsViewController.swift in Sources */,
 				6C1DAB4720ABF81800782522 /* PostViewController.swift in Sources */,
+				6C1DAB4D20AD4B6500782522 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
