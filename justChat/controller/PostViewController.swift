@@ -21,7 +21,7 @@ class PostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.delegate = self
-        // Do any additional setup after loading the view.
+        sendButton.bindToKeyboard()
     }
 
     @IBAction func sendButtonPressed(_ sender: Any) {
