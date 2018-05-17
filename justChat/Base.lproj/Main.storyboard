@@ -98,6 +98,11 @@
                                                 <constraint firstItem="q8E-OI-DYn" firstAttribute="leading" secondItem="LVr-i7-xo7" secondAttribute="trailing" constant="10" id="vh2-eB-QBl"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentMessageLabel" destination="cYR-Zx-SQ8" id="182-r7-jU7"/>
+                                            <outlet property="emailLabel" destination="b7A-IE-CYf" id="p1F-Sf-H8g"/>
+                                            <outlet property="profileImage" destination="LVr-i7-xo7" id="xcC-4a-jNA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
