@@ -409,17 +409,54 @@
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RwR-wV-pyg">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RwR-wV-pyg">
                                         <rect key="frame" x="0.0" y="193" width="335" height="364"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rDC-cs-kKc">
-                                                <rect key="frame" x="0.0" y="28" width="335" height="44"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" rowHeight="60" id="rDC-cs-kKc" customClass="UserCell" customModule="justChat" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="335" height="60"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rDC-cs-kKc" id="BGb-bJ-vt3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="59.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="Xpd-al-ePF">
+                                                            <rect key="frame" x="10" y="5" width="50" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="50" id="iEu-eQ-t63"/>
+                                                                <constraint firstAttribute="height" constant="50" id="tY0-O6-DYF"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteCheckmark" translatesAutoresizingMaskIntoConstraints="NO" id="Ywx-r7-LEN">
+                                                            <rect key="frame" x="301" y="18" width="24" height="24"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="24" id="eTT-a7-2kr"/>
+                                                                <constraint firstAttribute="height" constant="24" id="vEw-nq-ftn"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user@user.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jpm-rI-avr">
+                                                            <rect key="frame" x="68" y="20.5" width="225" height="20"/>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                            <color key="textColor" red="0.081706095840000006" green="1" blue="0.052838281819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Ywx-r7-LEN" firstAttribute="centerY" secondItem="BGb-bJ-vt3" secondAttribute="centerY" id="0Xe-Ml-udB"/>
+                                                        <constraint firstItem="jpm-rI-avr" firstAttribute="centerY" secondItem="BGb-bJ-vt3" secondAttribute="centerY" id="44F-du-D1Q"/>
+                                                        <constraint firstItem="Ywx-r7-LEN" firstAttribute="leading" secondItem="jpm-rI-avr" secondAttribute="trailing" constant="8" id="CUy-3r-RB0"/>
+                                                        <constraint firstItem="Xpd-al-ePF" firstAttribute="leading" secondItem="BGb-bJ-vt3" secondAttribute="leading" constant="10" id="Dmu-l3-VTf"/>
+                                                        <constraint firstItem="Xpd-al-ePF" firstAttribute="centerY" secondItem="BGb-bJ-vt3" secondAttribute="centerY" id="ack-p9-obU"/>
+                                                        <constraint firstItem="jpm-rI-avr" firstAttribute="leading" secondItem="Xpd-al-ePF" secondAttribute="trailing" constant="8" id="mgg-G9-09d"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Ywx-r7-LEN" secondAttribute="trailing" constant="10" id="tQd-UD-By0"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="checkImage" destination="Ywx-r7-LEN" id="PrX-QD-F2A"/>
+                                                    <outlet property="emailLabel" destination="jpm-rI-avr" id="51I-eg-Rmw"/>
+                                                    <outlet property="profileImage" destination="Xpd-al-ePF" id="qaS-gX-ELx"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -449,7 +486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F5h-6q-Cbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526" y="759"/>
+            <point key="canvasLocation" x="1525.5999999999999" y="757.87106446776613"/>
         </scene>
         <!--Me-->
         <scene sceneID="ZBH-vc-KqS">
@@ -787,6 +824,7 @@
         <image name="logoutIcon" width="19" height="21"/>
         <image name="me-tabIcon" width="25" height="25"/>
         <image name="send" width="29" height="29"/>
+        <image name="whiteCheckmark" width="18" height="14"/>
     </resources>
     <color key="tintColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
