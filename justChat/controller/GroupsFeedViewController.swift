@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class GroupsFeedViewController: UIViewController {
 
@@ -20,10 +21,14 @@ class GroupsFeedViewController: UIViewController {
     
     //variables
     var group: Group?
+     var groupMessages = [Message]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sendButtonView.bindToKeyboard()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
 
         // Do any additional setup after loading the view.
     }
@@ -41,9 +46,28 @@ class GroupsFeedViewController: UIViewController {
             self.membersLabel.text = returnedEmails.joined(separator: ", ")
         }
         
+        DataService.instance.getAllMessagesFor(desiredGroup: self.group!) { (returnGrpMsg) in
+            
+            self.groupMessages = returnGrpMsg
+            self.tableView.reloadData()
+        }
     }
     
     @IBAction func sendButtonPressed(_ sender: Any) {
+        
+        if messageTextField.text != "" {
+            messageTextField.isEnabled = false
+            sendButton.isEnabled = false
+            
+            DataService.instance.uploadPost(withMessage: messageTextField.text!, forUID: Auth.auth().currentUser!.uid, withGroupKey: group?.key) { (complete) in
+                
+                if complete {
+                    self.messageTextField.text = ""
+                    self.sendButton.isEnabled = true
+                    self.messageTextField.isEnabled = true
+                }
+            }
+        }
     }
     
     
@@ -54,4 +78,29 @@ class GroupsFeedViewController: UIViewController {
     
 
 
+}
+
+extension GroupsFeedViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return groupMessages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "groupsFeedCell", for: indexPath) as? GroupsFeedCell else {return UITableViewCell()}
+        
+        let message = groupMessages[indexPath.row]
+        DataService.instance.getUsername(forUID: message.sender) { (email) in
+            
+            cell.configureCell(profileImage: UIImage(named: "defaultProfileImage")!, email: email, content: message.content)
+            
+        }
+        
+        return cell
+        
+    }
 }
