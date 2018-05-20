@@ -17,6 +17,7 @@
 		6C1DAB4D20AD4B6500782522 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1DAB4C20AD4B6500782522 /* Message.swift */; };
 		6C1DAB4F20AE847300782522 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1DAB4E20AE847300782522 /* CreateGroupViewController.swift */; };
 		6C1DAB5120B0F9F500782522 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1DAB5020B0F9F500782522 /* UserCell.swift */; };
+		6C6E78F820B1E9C700045AAE /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6E78F720B1E9C700045AAE /* GroupCell.swift */; };
 		6C971D5420A7544A002B4972 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C971D5320A7544A002B4972 /* AppDelegate.swift */; };
 		6C971D5B20A7544A002B4972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C971D5920A7544A002B4972 /* Main.storyboard */; };
 		6C971D5D20A7544B002B4972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C971D5C20A7544B002B4972 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		6C1DAB4C20AD4B6500782522 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		6C1DAB4E20AE847300782522 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		6C1DAB5020B0F9F500782522 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		6C6E78F720B1E9C700045AAE /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		6C971D5020A7544A002B4972 /* justChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = justChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C971D5320A7544A002B4972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C971D5A20A7544A002B4972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				6CDA5F5C20AA9ABD000E6BC8 /* ShadowView.swift */,
 				6C1DAB4A20AD3DA900782522 /* FeedCell.swift */,
 				6C1DAB5020B0F9F500782522 /* UserCell.swift */,
+				6C6E78F720B1E9C700045AAE /* GroupCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				6C1DAB4520ABEEE300782522 /* MeViewController.swift in Sources */,
 				6C1DAB4B20AD3DA900782522 /* FeedCell.swift in Sources */,
 				6C971D5420A7544A002B4972 /* AppDelegate.swift in Sources */,
+				6C6E78F820B1E9C700045AAE /* GroupCell.swift in Sources */,
 				6C1DAB3F20ABC7DA00782522 /* AuthService.swift in Sources */,
 				6C1DAB4920AD33EB00782522 /* UIViewExtention.swift in Sources */,
 				6C1DAB4F20AE847300782522 /* CreateGroupViewController.swift in Sources */,
