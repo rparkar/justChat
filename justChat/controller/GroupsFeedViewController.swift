@@ -50,6 +50,10 @@ class GroupsFeedViewController: UIViewController {
             
             self.groupMessages = returnGrpMsg
             self.tableView.reloadData()
+            
+            if self.groupMessages.count > 0 {
+                self.tableView.scrollToRow(at: IndexPath(row: self.groupMessages.count - 1, section: 0), at: .none, animated: true)
+            }
         }
     }
     
