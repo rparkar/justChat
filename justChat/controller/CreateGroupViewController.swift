@@ -19,26 +19,48 @@ class CreateGroupViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var groupMemberLabel: UILabel!
     
+    //variable
+    var emailArray = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.delegate = self
         tableView.dataSource = self
+        emailSearchTextField.delegate = self
+        
+        emailSearchTextField.addTarget(self, action: #selector(textFieldeditingChanged), for: .editingChanged)
         // Do any additional setup after loading the view.
     }
 
+    @objc func textFieldeditingChanged() {
+        
+        if emailSearchTextField.text == ""  {
+            emailArray = []
+            tableView.reloadData()
+        } else {
+            DataService.instance.getEmail(forSearchQuery: emailSearchTextField.text!) { (emailArrayReturned) in
+                
+                self.emailArray = emailArrayReturned
+                self.tableView.reloadData()
+            }
+        }
+        
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return emailArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as? UserCell else {return UITableViewCell()}
-        cell.configureCell(profileImage: <#T##UIImage#>, email: <#T##String#>, isSelected: <#T##Bool#>)
+        let profileImage = UIImage(named: "defaultProfileImage")
+        cell.configureCell(profileImage: profileImage!, email: emailArray[indexPath.row], isSelected: true)
         return cell
     }
     
@@ -48,5 +70,9 @@ class CreateGroupViewController: UIViewController, UITableViewDelegate, UITableV
     @IBAction func closeButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+}
+
+extension CreateGroupViewController: UITextFieldDelegate {
     
 }
