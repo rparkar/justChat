@@ -70,7 +70,8 @@ extension GroupsViewController: UITableViewDelegate, UITableViewDataSource {
         
         groupFeedVC.initGroupData(forgroup: groupsArray[indexPath.row])
         
-        present(groupFeedVC, animated: true, completion: nil)
+        //present(groupFeedVC, animated: true, completion: nil)
+        presentDetail(groupFeedVC)
         
         
     }
