@@ -348,7 +348,7 @@
         <!--Groups Feed View Controller-->
         <scene sceneID="ZcE-1d-wQd">
             <objects>
-                <viewController id="Ot4-9f-D0G" customClass="GroupsFeedViewController" customModule="justChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupFeedVC" id="Ot4-9f-D0G" customClass="GroupsFeedViewController" customModule="justChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="egg-9X-Cqi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
