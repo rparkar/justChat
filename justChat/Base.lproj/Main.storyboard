@@ -387,7 +387,7 @@
                                 <rect key="frame" x="0.0" y="123" width="375" height="499"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupsFeedCell" rowHeight="100" id="VRj-ix-FjO" customClass="GroupsFeedCell" customModule="justChat" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="groupsFeedCell" rowHeight="100" id="VRj-ix-FjO" customClass="GroupsFeedCell" customModule="justChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VRj-ix-FjO" id="ww8-UF-Eow">
@@ -481,6 +481,7 @@
                         <constraints>
                             <constraint firstItem="5fv-iU-i7d" firstAttribute="leading" secondItem="4Oi-V6-MCs" secondAttribute="leading" id="AD7-2c-akC"/>
                             <constraint firstItem="5fv-iU-i7d" firstAttribute="trailing" secondItem="4Oi-V6-MCs" secondAttribute="trailing" id="BI4-IF-U8N"/>
+                            <constraint firstItem="4Oi-V6-MCs" firstAttribute="top" secondItem="5fv-iU-i7d" secondAttribute="bottom" id="Cqu-Ny-bPl"/>
                             <constraint firstItem="5fv-iU-i7d" firstAttribute="top" secondItem="iZf-TL-Wqs" secondAttribute="bottom" constant="8" symbolic="YES" id="Dtj-CK-IAn"/>
                             <constraint firstItem="Rbk-Pu-2yC" firstAttribute="leading" secondItem="uqn-n0-RzS" secondAttribute="leading" id="Mbn-dZ-iUv"/>
                             <constraint firstItem="Rbk-Pu-2yC" firstAttribute="top" secondItem="uqn-n0-RzS" secondAttribute="top" id="WAd-6J-84d"/>
@@ -489,7 +490,6 @@
                             <constraint firstItem="4Oi-V6-MCs" firstAttribute="leading" secondItem="uqn-n0-RzS" secondAttribute="leading" id="oJe-k5-1Ym"/>
                             <constraint firstItem="iZf-TL-Wqs" firstAttribute="top" secondItem="Rbk-Pu-2yC" secondAttribute="bottom" constant="8" id="oPP-Dk-ixO"/>
                             <constraint firstItem="iZf-TL-Wqs" firstAttribute="leading" secondItem="uqn-n0-RzS" secondAttribute="leading" constant="16" id="pEC-v2-NAI"/>
-                            <constraint firstItem="4Oi-V6-MCs" firstAttribute="top" secondItem="5fv-iU-i7d" secondAttribute="bottom" id="sHb-BL-TFg"/>
                             <constraint firstItem="4Oi-V6-MCs" firstAttribute="bottom" secondItem="uqn-n0-RzS" secondAttribute="bottom" id="uSj-sJ-TcN"/>
                             <constraint firstItem="Rbk-Pu-2yC" firstAttribute="trailing" secondItem="uqn-n0-RzS" secondAttribute="trailing" id="zbb-SS-lnh"/>
                         </constraints>
@@ -540,8 +540,6 @@
                                         <rect key="frame" x="315" y="33.5" width="44" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="Rgm-v9-z6j"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="WaH-7u-R99"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="iP2-9v-MDE"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
                                         <state key="normal" title="DONE"/>
@@ -557,7 +555,6 @@
                                     <constraint firstItem="MUd-YJ-nZO" firstAttribute="centerY" secondItem="Nue-Gu-4nF" secondAttribute="centerY" id="FeS-Qi-gNr"/>
                                     <constraint firstItem="Nue-Gu-4nF" firstAttribute="centerX" secondItem="M7g-mz-eGh" secondAttribute="centerX" id="LuM-kP-KL7"/>
                                     <constraint firstAttribute="trailing" secondItem="MUd-YJ-nZO" secondAttribute="trailing" constant="16" id="OPL-Mh-ZNn"/>
-                                    <constraint firstItem="MUd-YJ-nZO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="M7g-mz-eGh" secondAttribute="leading" constant="20" symbolic="YES" id="ceW-tA-5xf"/>
                                     <constraint firstAttribute="height" constant="70" id="dzo-m8-pcP"/>
                                     <constraint firstItem="Gkp-EO-X2B" firstAttribute="leading" secondItem="M7g-mz-eGh" secondAttribute="leading" constant="16" id="hDx-ID-OFH"/>
                                     <constraint firstItem="Gkp-EO-X2B" firstAttribute="centerY" secondItem="Nue-Gu-4nF" secondAttribute="centerY" id="wYi-cU-ggS"/>
@@ -748,7 +745,7 @@
                                 <rect key="frame" x="0.0" y="370" width="375" height="248"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="pnF-WH-PIM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="meCell" rowHeight="50" id="pnF-WH-PIM">
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pnF-WH-PIM" id="oUM-iT-X4H">

@@ -21,16 +21,15 @@ class GroupsFeedViewController: UIViewController {
     
     //variables
     var group: Group?
-     var groupMessages = [Message]()
+    var groupMessages = [Message]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         sendButtonView.bindToKeyboard()
+        
         tableView.delegate = self
         tableView.dataSource = self
-        
-
-        // Do any additional setup after loading the view.
     }
     
     func initGroupData(forgroup group: Group) {
@@ -38,7 +37,7 @@ class GroupsFeedViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         
         groupTitleLabel.text = group?.groupTitle
         DataService.instance.getEmailsFor(group: group!) { (returnedEmails) in
@@ -46,15 +45,23 @@ class GroupsFeedViewController: UIViewController {
             self.membersLabel.text = returnedEmails.joined(separator: ", ")
         }
         
-        DataService.instance.getAllMessagesFor(desiredGroup: self.group!) { (returnGrpMsg) in
+        DataService.instance.REF_GROUPS.observe(.value) { (snapShot) in
             
-            self.groupMessages = returnGrpMsg
-            self.tableView.reloadData()
+            DataService.instance.getAllMessagesFor(desiredGroup: self.group!, handler:  { (returnGrpMsg) in
+                
+                self.groupMessages = returnGrpMsg
+                self.tableView.reloadData()
+                
+                if self.groupMessages.count > 0 {
+                    
+                    self.tableView.scrollToRow(at: IndexPath(row: self.groupMessages.count - 1, section: 0), at: .bottom, animated: true)
+                    
+                }
+            } )
             
-            if self.groupMessages.count > 0 {
-                self.tableView.scrollToRow(at: IndexPath(row: self.groupMessages.count - 1, section: 0), at: .none, animated: true)
-            }
+            
         }
+
     }
     
     @IBAction func sendButtonPressed(_ sender: Any) {

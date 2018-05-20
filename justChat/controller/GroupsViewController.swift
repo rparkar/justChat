@@ -64,7 +64,7 @@ extension GroupsViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         guard let groupFeedVC = storyboard?.instantiateViewController(withIdentifier: "GroupFeedVC") as? GroupsFeedViewController else {return}
         
@@ -72,7 +72,6 @@ extension GroupsViewController: UITableViewDelegate, UITableViewDataSource {
         
         //present(groupFeedVC, animated: true, completion: nil)
         presentDetail(groupFeedVC)
-        
-        
     }
+    
 }
